@@ -1,0 +1,464 @@
+1718035338.405224 execve("./a.out", ["./a.out"], 0x7ffe67e5c4d0 /* 26 vars */) = 0
+1718035338.414023 brk(NULL)             = 0x5572ecea4000
+1718035338.415265 arch_prctl(0x3001 /* ARCH_??? */, 0x7ffdac0b00d0) = -1 EINVAL (Invalid argument)
+1718035338.416604 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd536d25000
+1718035338.417929 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+1718035338.418779 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+1718035338.419562 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=16763, ...}, AT_EMPTY_PATH) = 0
+1718035338.420411 mmap(NULL, 16763, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fd536d20000
+1718035338.421388 close(3)              = 0
+1718035338.422782 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+1718035338.423525 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+1718035338.424235 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1718035338.424763 pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+1718035338.425250 pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+1718035338.425732 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+1718035338.426218 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1718035338.426695 mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd536af7000
+1718035338.427194 mprotect(0x7fd536b1f000, 2023424, PROT_NONE) = 0
+1718035338.427678 mmap(0x7fd536b1f000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fd536b1f000
+1718035338.428175 mmap(0x7fd536cb4000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7fd536cb4000
+1718035338.428662 mmap(0x7fd536d0d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7fd536d0d000
+1718035338.429345 mmap(0x7fd536d13000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fd536d13000
+1718035338.429974 close(3)              = 0
+1718035338.430486 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd536af4000
+1718035338.430973 arch_prctl(ARCH_SET_FS, 0x7fd536af4740) = 0
+1718035338.431451 set_tid_address(0x7fd536af4a10) = 8890
+1718035338.431929 set_robust_list(0x7fd536af4a20, 24) = 0
+1718035338.432417 rseq(0x7fd536af50e0, 0x20, 0, 0x53053053) = 0
+1718035338.432940 mprotect(0x7fd536d0d000, 16384, PROT_READ) = 0
+1718035338.433667 mprotect(0x5572ec3c8000, 4096, PROT_READ) = 0
+1718035338.434239 mprotect(0x7fd536d5f000, 8192, PROT_READ) = 0
+1718035338.434803 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1718035338.435395 munmap(0x7fd536d20000, 16763) = 0
+1718035338.436000 getrandom("\xa8\xd8\xbd\x9b\x05\xde\x10\x42", 8, GRND_NONBLOCK) = 8
+1718035338.436596 brk(NULL)             = 0x5572ecea4000
+1718035338.437113 brk(0x5572ecec5000)   = 0x5572ecec5000
+1718035338.437660 rt_sigaction(SIGPROF, {sa_handler=0x7fd536c1ff60, sa_mask=~[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fd536b39520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+1718035338.438229 setitimer(ITIMER_PROF, {it_interval={tv_sec=0, tv_usec=10000}, it_value={tv_sec=0, tv_usec=10000}}, {it_interval={tv_sec=0, tv_usec=0}, it_value={tv_sec=0, tv_usec=0}}) = 0
+1718035338.438829 newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}, AT_EMPTY_PATH) = 0
+1718035338.439486 write(1, "000Mundo da lista!\n1-> Inserir\n2"..., 88) = 88
+1718035338.440066 write(1, " 0-> Sair\n", 10) = 10
+1718035338.440895 newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}, AT_EMPTY_PATH) = 0
+1718035338.441659 read(0, "1\n", 1024)  = 2
+1718035339.914140 write(1, "Digite o valor a ser inserido: ", 31) = 31
+1718035339.915582 read(0, "1\n", 1024)  = 2
+1718035340.580284 write(1, "Inserido com sucesso!\n", 22) = 22
+1718035340.581447 write(1, "Mundo da lista!\n1-> Inserir\n2-> "..., 85) = 85
+1718035340.582780 write(1, " 0-> Sair\n", 10) = 10
+1718035340.584088 read(0, "1\n", 1024)  = 2
+1718035341.175928 write(1, "Digite o valor a ser inserido: ", 31) = 31
+1718035341.176789 read(0, "2\n", 1024)  = 2
+1718035341.465009 write(1, "Inserido com sucesso!\n", 22) = 22
+1718035341.466820 write(1, "Mundo da lista!\n1-> Inserir\n2-> "..., 85) = 85
+1718035341.468836 write(1, " 0-> Sair\n", 10) = 10
+1718035341.470257 read(0, "1\n", 1024)  = 2
+1718035341.873214 write(1, "Digite o valor a ser inserido: ", 31) = 31
+1718035341.874527 read(0, "3\n", 1024)  = 2
+1718035342.187282 write(1, "Inserido com sucesso!\n", 22) = 22
+1718035342.188673 write(1, "Mundo da lista!\n1-> Inserir\n2-> "..., 85) = 85
+1718035342.190244 write(1, " 0-> Sair\n", 10) = 10
+1718035342.191959 read(0, "1\n", 1024)  = 2
+1718035342.596048 write(1, "Digite o valor a ser inserido: ", 31) = 31
+1718035342.596615 read(0, "4\n", 1024)  = 2
+1718035343.121482 write(1, "Inserido com sucesso!\n", 22) = 22
+1718035343.122011 write(1, "Mundo da lista!\n1-> Inserir\n2-> "..., 85) = 85
+1718035343.122498 write(1, " 0-> Sair\n", 10) = 10
+1718035343.122940 read(0, "1\n", 1024)  = 2
+1718035343.796686 write(1, "Digite o valor a ser inserido: ", 31) = 31
+1718035343.798001 read(0, "5\n", 1024)  = 2
+1718035344.224705 write(1, "Inserido com sucesso!\n", 22) = 22
+1718035344.226090 write(1, "Mundo da lista!\n1-> Inserir\n2-> "..., 85) = 85
+1718035344.227197 write(1, " 0-> Sair\n", 10) = 10
+1718035344.228317 read(0, "0\n", 1024)  = 2
+1718035344.974532 write(1, "At\303\251 outra vez!\n", 16) = 16
+1718035344.975313 write(1, "\n", 1)     = 1
+1718035344.976211 write(1, "1, 2, 3, 4, 5, \n", 16) = 16
+1718035344.988660 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035344.989201 rt_sigreturn({mask=[]}) = 1
+1718035344.998629 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035344.999235 rt_sigreturn({mask=[]}) = 0
+1718035345.008688 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.009315 rt_sigreturn({mask=[]}) = 1
+1718035345.018610 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.019233 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.028720 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.029700 rt_sigreturn({mask=[]}) = 1
+1718035345.038656 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.039237 rt_sigreturn({mask=[]}) = 1
+1718035345.048654 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.049409 rt_sigreturn({mask=[]}) = 0
+1718035345.058726 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.059544 rt_sigreturn({mask=[]}) = 0
+1718035345.068665 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.069582 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.078637 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.079372 rt_sigreturn({mask=[]}) = 1
+1718035345.088695 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.089484 rt_sigreturn({mask=[]}) = 1
+1718035345.098752 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.099413 rt_sigreturn({mask=[]}) = 1
+1718035345.108600 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.109101 rt_sigreturn({mask=[]}) = 0
+1718035345.118632 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.119142 rt_sigreturn({mask=[]}) = 1
+1718035345.128627 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.129189 rt_sigreturn({mask=[]}) = 1
+1718035345.138624 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.139124 rt_sigreturn({mask=[]}) = 0
+1718035345.148647 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.149141 rt_sigreturn({mask=[]}) = 0
+1718035345.158704 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.159620 rt_sigreturn({mask=[]}) = 1
+1718035345.168661 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.169387 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.178687 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.180212 rt_sigreturn({mask=[]}) = 1
+1718035345.188673 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.189397 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.198625 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.199099 rt_sigreturn({mask=[]}) = 1
+1718035345.208635 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.209208 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.218632 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.219195 rt_sigreturn({mask=[]}) = 1
+1718035345.228701 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.229307 rt_sigreturn({mask=[]}) = 0
+1718035345.238674 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.239117 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.248624 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.249138 rt_sigreturn({mask=[]}) = 1
+1718035345.258650 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.259336 rt_sigreturn({mask=[]}) = 1
+1718035345.268820 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.269466 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.278611 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.279359 rt_sigreturn({mask=[]}) = 0
+1718035345.288701 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.289430 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.298614 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.299143 rt_sigreturn({mask=[]}) = 1
+1718035345.308705 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.310509 rt_sigreturn({mask=[]}) = 1
+1718035345.318654 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.319355 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.328689 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.329287 rt_sigreturn({mask=[]}) = 1
+1718035345.338597 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.339213 rt_sigreturn({mask=[]}) = 1
+1718035345.348741 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.354293 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.358627 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.359039 rt_sigreturn({mask=[]}) = 1
+1718035345.368653 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.369116 rt_sigreturn({mask=[]}) = 0
+1718035345.378694 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.379502 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.388637 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.389190 rt_sigreturn({mask=[]}) = 1
+1718035345.398701 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.399129 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.408634 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.409216 rt_sigreturn({mask=[]}) = 1
+1718035345.418736 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.419614 rt_sigreturn({mask=[]}) = 1
+1718035345.428662 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.429235 rt_sigreturn({mask=[]}) = 1
+1718035345.438679 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.439144 rt_sigreturn({mask=[]}) = 1
+1718035345.448620 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.449272 rt_sigreturn({mask=[]}) = 0
+1718035345.458600 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.459030 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.468681 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.469096 rt_sigreturn({mask=[]}) = 0
+1718035345.478729 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.479493 rt_sigreturn({mask=[]}) = 0
+1718035345.488695 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.488977 rt_sigreturn({mask=[]}) = 1
+1718035345.498603 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.499044 rt_sigreturn({mask=[]}) = 1
+1718035345.508711 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.509429 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.518644 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.526723 rt_sigreturn({mask=[]}) = 1
+1718035345.538652 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.544568 rt_sigreturn({mask=[]}) = 1
+1718035345.548676 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.549620 rt_sigreturn({mask=[]}) = 1
+1718035345.558633 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.559471 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.568745 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.569444 rt_sigreturn({mask=[]}) = 1
+1718035345.578716 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.579313 rt_sigreturn({mask=[]}) = 1
+1718035345.588600 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.588951 rt_sigreturn({mask=[]}) = 1
+1718035345.598591 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.599094 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.608615 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.609344 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.618737 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.619318 rt_sigreturn({mask=[]}) = 1
+1718035345.628709 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.629356 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.638698 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.639346 rt_sigreturn({mask=[]}) = 1
+1718035345.648676 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.649427 rt_sigreturn({mask=[]}) = 1
+1718035345.658669 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.659406 rt_sigreturn({mask=[]}) = 1
+1718035345.668689 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.669292 rt_sigreturn({mask=[]}) = 1
+1718035345.678682 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.679240 rt_sigreturn({mask=[]}) = 0
+1718035345.688647 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.688846 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.698738 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.699261 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.708688 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.709085 rt_sigreturn({mask=[]}) = 0
+1718035345.718702 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.719539 rt_sigreturn({mask=[]}) = 0
+1718035345.738717 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.771675 rt_sigreturn({mask=[]}) = 1
+1718035345.788863 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.793355 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.808718 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.810570 rt_sigreturn({mask=[]}) = 1
+1718035345.818779 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.819726 rt_sigreturn({mask=[]}) = 1
+1718035345.838704 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.839628 rt_sigreturn({mask=[]}) = 0
+1718035345.858704 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.859501 rt_sigreturn({mask=[]}) = 0
+1718035345.868713 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.869345 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.888631 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.895398 rt_sigreturn({mask=[]}) = 0
+1718035345.898709 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.899375 rt_sigreturn({mask=[]}) = 0
+1718035345.908766 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.911509 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.918712 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.919409 rt_sigreturn({mask=[]}) = 1
+1718035345.928615 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.929200 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.938678 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.939364 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.948684 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.949394 rt_sigreturn({mask=[]}) = 0
+1718035345.958755 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.959187 rt_sigreturn({mask=[]}) = 0
+1718035345.968637 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.969087 rt_sigreturn({mask=[]}) = 1
+1718035345.978693 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.979283 rt_sigreturn({mask=[]}) = 0
+1718035345.988759 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.989455 rt_sigreturn({mask=[]}) = 93952089420160
+1718035345.998632 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035345.999382 rt_sigreturn({mask=[]}) = 1
+1718035346.008709 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.009348 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.018617 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.019209 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.028653 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.029374 rt_sigreturn({mask=[]}) = 1
+1718035346.038626 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.039339 rt_sigreturn({mask=[]}) = 1
+1718035346.048643 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.049175 rt_sigreturn({mask=[]}) = 1
+1718035346.058665 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.059385 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.068711 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.069338 rt_sigreturn({mask=[]}) = 0
+1718035346.078709 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.079458 rt_sigreturn({mask=[]}) = 1
+1718035346.088718 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.089397 rt_sigreturn({mask=[]}) = 1
+1718035346.098705 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.099262 rt_sigreturn({mask=[]}) = 0
+1718035346.108732 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.109379 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.118715 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.119393 rt_sigreturn({mask=[]}) = 0
+1718035346.128719 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.129361 rt_sigreturn({mask=[]}) = 1
+1718035346.138587 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.139328 rt_sigreturn({mask=[]}) = 0
+1718035346.148666 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.149103 rt_sigreturn({mask=[]}) = 0
+1718035346.158603 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.158960 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.168716 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.169376 rt_sigreturn({mask=[]}) = 0
+1718035346.178687 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.179258 rt_sigreturn({mask=[]}) = 0
+1718035346.188743 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.189280 rt_sigreturn({mask=[]}) = 1
+1718035346.198614 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.199034 rt_sigreturn({mask=[]}) = 1
+1718035346.208685 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.209251 rt_sigreturn({mask=[]}) = 1
+1718035346.218597 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.219108 rt_sigreturn({mask=[]}) = 0
+1718035346.228696 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.229391 rt_sigreturn({mask=[]}) = 1
+1718035346.238590 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.239115 rt_sigreturn({mask=[]}) = 0
+1718035346.248785 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.249374 rt_sigreturn({mask=[]}) = 1
+1718035346.258674 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.259232 rt_sigreturn({mask=[]}) = 1
+1718035346.268688 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.269242 rt_sigreturn({mask=[]}) = 0
+1718035346.278601 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.278834 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.288637 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.289268 rt_sigreturn({mask=[]}) = 1
+1718035346.298728 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.301600 rt_sigreturn({mask=[]}) = 0
+1718035346.308635 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.309225 rt_sigreturn({mask=[]}) = 1
+1718035346.318618 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.325417 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.328710 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.329388 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.338622 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.339266 rt_sigreturn({mask=[]}) = 1
+1718035346.348621 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.348883 rt_sigreturn({mask=[]}) = 1
+1718035346.358616 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.359277 rt_sigreturn({mask=[]}) = 1
+1718035346.368609 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.369223 rt_sigreturn({mask=[]}) = 1
+1718035346.378671 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.383440 rt_sigreturn({mask=[]}) = 1
+1718035346.388639 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.389407 rt_sigreturn({mask=[]}) = 0
+1718035346.398689 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.408721 rt_sigreturn({mask=[]}) = 0
+1718035346.448721 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.468944 rt_sigreturn({mask=[]}) = 1
+1718035346.488734 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.496853 rt_sigreturn({mask=[]}) = 1
+1718035346.518655 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.519582 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.528652 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.532761 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.548714 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.553370 rt_sigreturn({mask=[]}) = 1
+1718035346.558718 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.559985 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.568712 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.580013 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.588838 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.589795 rt_sigreturn({mask=[]}) = 1
+1718035346.598697 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.599480 rt_sigreturn({mask=[]}) = 1
+1718035346.608688 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.609488 rt_sigreturn({mask=[]}) = 0
+1718035346.618594 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.619328 rt_sigreturn({mask=[]}) = 1
+1718035346.628749 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.629430 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.638648 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.639277 rt_sigreturn({mask=[]}) = 1
+1718035346.648595 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.649242 rt_sigreturn({mask=[]}) = 1
+1718035346.658681 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.659488 rt_sigreturn({mask=[]}) = 1
+1718035346.668685 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.669334 rt_sigreturn({mask=[]}) = 1
+1718035346.678598 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.679108 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.688600 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.689071 rt_sigreturn({mask=[]}) = 1
+1718035346.698692 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.699338 rt_sigreturn({mask=[]}) = 0
+1718035346.708748 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.709336 rt_sigreturn({mask=[]}) = 1
+1718035346.718615 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.719147 rt_sigreturn({mask=[]}) = 0
+1718035346.728678 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.729395 rt_sigreturn({mask=[]}) = 0
+1718035346.738724 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.739360 rt_sigreturn({mask=[]}) = 1
+1718035346.748616 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.749111 rt_sigreturn({mask=[]}) = 1
+1718035346.758678 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.759142 rt_sigreturn({mask=[]}) = 1
+1718035346.768697 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.769133 rt_sigreturn({mask=[]}) = 1
+1718035346.778683 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.779181 rt_sigreturn({mask=[]}) = 1
+1718035346.788701 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.789224 rt_sigreturn({mask=[]}) = 0
+1718035346.798709 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.799230 rt_sigreturn({mask=[]}) = 0
+1718035346.808706 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.809236 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.818692 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.819186 rt_sigreturn({mask=[]}) = 0
+1718035346.828620 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.829564 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.838633 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.839204 rt_sigreturn({mask=[]}) = 0
+1718035346.848704 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.849319 rt_sigreturn({mask=[]}) = 0
+1718035346.858595 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.858975 rt_sigreturn({mask=[]}) = 1
+1718035346.868614 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.869042 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.878619 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.879862 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.888702 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.889123 rt_sigreturn({mask=[]}) = 1
+1718035346.898692 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.899296 rt_sigreturn({mask=[]}) = 0
+1718035346.908697 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.909212 rt_sigreturn({mask=[]}) = 1
+1718035346.918699 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.919370 rt_sigreturn({mask=[]}) = 1
+1718035346.928686 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.929032 rt_sigreturn({mask=[]}) = 1
+1718035346.938673 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.939302 rt_sigreturn({mask=[]}) = 93952089420160
+1718035346.948615 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.949249 rt_sigreturn({mask=[]}) = 0
+1718035346.958584 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.958979 rt_sigreturn({mask=[]}) = 0
+1718035346.968631 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.969087 rt_sigreturn({mask=[]}) = 1
+1718035346.978782 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.979278 rt_sigreturn({mask=[]}) = 1
+1718035346.988685 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.989156 rt_sigreturn({mask=[]}) = 0
+1718035346.998699 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035346.999178 rt_sigreturn({mask=[]}) = 1
+1718035347.008612 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.009088 rt_sigreturn({mask=[]}) = 93952089420160
+1718035347.018785 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.019221 rt_sigreturn({mask=[]}) = 1
+1718035347.028629 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.029137 rt_sigreturn({mask=[]}) = 93952089420160
+1718035347.038687 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.039342 rt_sigreturn({mask=[]}) = 1
+1718035347.048708 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.049204 rt_sigreturn({mask=[]}) = 1
+1718035347.058689 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.059106 rt_sigreturn({mask=[]}) = 1
+1718035347.068712 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.069191 rt_sigreturn({mask=[]}) = 93952089420160
+1718035347.078760 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.079118 rt_sigreturn({mask=[]}) = 93952089420160
+1718035347.088651 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.089074 rt_sigreturn({mask=[]}) = 1
+1718035347.098672 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.099068 rt_sigreturn({mask=[]}) = 1
+1718035347.108688 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.108930 rt_sigreturn({mask=[]}) = 93952089420160
+1718035347.118592 --- SIGPROF {si_signo=SIGPROF, si_code=SI_KERNEL} ---
+1718035347.118972 rt_sigreturn({mask=[]}) = 1
+1718035347.119654 --- SIGINT {si_signo=SIGINT, si_code=SI_KERNEL} ---
+1718035347.120283 +++ killed by SIGINT +++
