@@ -4,7 +4,7 @@
 #include <string.h>
 
 struct TDqueue {
-    int data[29];
+    int data[30];
     int tamanho;
     int capacidade;
 };
